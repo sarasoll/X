@@ -1,0 +1,90 @@
+{% extends 'partials/base.html' %} {% block title %} Home {% endblock %}
+<br />
+{% block content %}
+
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header">Stat</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h4 class="text-center">card in the body 1</h4>
+                  <p class="text-center">txt1</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h4 class="text-center">card in the body 2</h4>
+                  <p class="text-center">txt2</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card shadow">
+                <div class="card-body">
+                  <h4 class="text-center">card in the body 3</h4>
+                  <p class="text-center">txt3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow">
+        <div class="card-header">Soll Information</div>
+        <div class="card-body">
+          <form action="/add" method="POST">
+            <label for="">Title</label>
+            <input
+              class="form-control"
+              type="text"
+              name="title"
+              placeholder="add info.."
+            />
+            <input
+              class="btn btn-primary mt-2 btn-sm"
+              type="submit"
+              value="Add"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-start-100 border-5 mt-3 shadow">
+    <div class="card-body">
+      <h5>1 | Flask Proj</h5>
+      <span class="badge bg-success">Done!</span>
+      <a class="btn btn-info btn-sm " href="">UpUp</a>
+      <a class="btn btn-danger btn-sm " href="">CutOut</a>
+    </div>
+  </div>
+  <div class="border-start-100 border-5 mt-3 shadow">
+    <div class="card-body">
+      <h5>2 | CyberSecurity</h5>
+      <span class="badge bg-success">Done!</span>
+      <a class="btn btn-info btn-sm " href="">UpUp</a>
+      <a class="btn btn-danger btn-sm " href="">CutOut</a>
+    </div>
+  </div>
+  <div class="border-start-100 border-5 mt-3 shadow">
+    <div class="card-body">
+      <h5>3 | CS50x</h5>
+      <span class="badge bg-success">Done!</span>
+      <a class="btn btn-info btn-sm " href="">UpUp</a>
+      <a class="btn btn-danger btn-sm " href="">CutOut</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
