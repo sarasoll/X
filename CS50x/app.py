@@ -30,6 +30,6 @@ def add():
 def about():
     return render_template ("dashboard/about.html")
 
-#new projx
+#new day new Projx
 if __name__ == '__main__':
     app.run(debug=True)
