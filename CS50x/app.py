@@ -15,7 +15,8 @@ class Todo(db.Model):
 
 @app.route("/")
 def index():
-    return render_template ("dashboard/index.html")
+    todo_list = Todo.query.all()
+    return render_template ("dashboard/index.html", todo_list=todo_list)
 
 @app.route("/add", methods=['POST'])
 def add():
@@ -23,6 +24,13 @@ def add():
     title = request.form.get("title")
     new_todo= Todo(title=title, complete=False)
     db.session.add(new_todo)
+    db.session.commit()
+    return redirect(url_for("index"))
+
+@app.route("/delete/<int:id>")
+def delete(id):
+    todo = Todo.query.filter_by(id=id).first()
+    db.session.delete(todo)
     db.session.commit()
     return redirect(url_for("index"))
 
