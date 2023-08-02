@@ -68,9 +68,9 @@
     <div class="card-body">
       <h5>{{ todo.id }} | {{ todo.title }} </h5>
       {% if todo.complete %}
-      <span class="badge bg-secondary">NotDone!</span>
-      {% else %}
       <span class="badge bg-success">Done!</span>
+      {% else %}
+      <span class="badge bg-secondary">NotDone!</span>
       {% endif %}
       <a class="btn btn-info btn-sm " href="/update/{{ todo.id }}">Click Here to end the TASK</a>
       <a class="btn btn-danger btn-sm " href="/delete/{{ todo.id }}">DEL</a>
