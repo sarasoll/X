@@ -17,7 +17,8 @@ class Todo(db.Model):
 def index():
     todo_list = Todo.query.all()
     total_todo = Todo.query.count()
-    return render_template ("dashboard/index.html", todo_list = todo_list, total_todo = total_todo )
+    completed_todo = Todo.query.filter_by(complete=True).count()
+    return render_template ("dashboard/index.html", todo_list = todo_list, total_todo = total_todo, completed_todo=completed_todo )
 
 @app.route("/add", methods=['POST'])
 def add():
