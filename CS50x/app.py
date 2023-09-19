@@ -47,6 +47,8 @@ def update(id):
 def about():
     return render_template ("dashboard/about.html")
 
-#new day new Projx
+#new day new Projx 
 if __name__ == '__main__':
     app.run(debug=True)
+
+#Project update to have a search bar
