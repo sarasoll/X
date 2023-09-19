@@ -1,9 +1,0 @@
-__pycache__/
-.venv
-
-.pycharm
-.vscode
-.gcloudignore
-
-.git
-.gitigonre
